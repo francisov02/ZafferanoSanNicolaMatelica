@@ -1,8 +1,55 @@
-<html>
-<title>Zafferano Matelica</title>
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zafferano di Famiglia</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
 
 <body>
-    <h2>San Nicola - MC</h2>
+
+    <header class="hero">
+        <div class="overlay">
+            <h1>Zafferano di Famiglia</h1>
+            <p>Zafferano puro raccolto a mano</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <h2>Zafferano in stimmi</h2>
+        <p>Zafferano coltivato e raccolto a mano in una terra campagnola a gestione familiare.</p>
+
+        <div class="product-box">
+            <p class="price">€8,00 / grammo</p>
+
+            <label for="quantity">Quantità (grammi)</label>
+            <input type="number" id="quantity" min="1" value="1" />
+
+            <button onclick="addToCart()">Aggiungi al carrello</button>
+        </div>
+    </section>
+
+    <section class="section alt">
+        <h2>Carrello</h2>
+        <div id="cart"></div>
+        <p id="total"></p>
+
+        <div class="order-buttons">
+            <button onclick="sendEmailOrder()">Invia ordine via Email</button>
+            <button class="whatsapp" onclick="sendWhatsAppOrder()">Invia ordine via WhatsApp</button>
+        </div>
+
+        <p class="note">Il pagamento e la conferma avverranno dopo il contatto diretto.</p>
+    </section>
+
+    <footer>
+        <p>© 2026 Zafferano di Famiglia · Coltivato con passione</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
